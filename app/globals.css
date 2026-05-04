@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-playfair: "Playfair Display", serif;
+    --font-inter: "Inter", sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #0a0a0a;
+    font-family: var(--font-inter), system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #0a0a0a;
+    color: #ffffff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f5f5f5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #d4d4d4;
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0a0a0a;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-6 py-20 md:px-12 md:py-28 lg:px-24;
+  }
+
+  .container-premium {
+    @apply max-w-7xl mx-auto px-6 md:px-12 lg:px-16;
+  }
+
+  /* Cards */
+  .glass-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+  }
+
+  .dark-card {
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+  }
+
+  .border-subtle {
+    @apply border border-neutral-200;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 bg-neutral-900 text-white text-xs font-bold tracking-widest uppercase transition-all duration-200 hover:bg-black;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 border border-neutral-900 text-neutral-900 text-xs font-bold tracking-widest uppercase transition-all duration-200 hover:bg-neutral-900 hover:text-white;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 text-neutral-500 text-xs font-bold tracking-widest uppercase transition-all duration-200 hover:text-neutral-900;
+  }
+
+  /* Typography */
+  .eyebrow {
+    @apply text-[10px] text-neutral-400 tracking-ultra uppercase font-medium;
+  }
+
+  .section-rule {
+    @apply w-full h-px bg-neutral-200;
+  }
+
+  /* Editorial ghost text */
+  .text-outline {
+    -webkit-text-stroke: 1px #e5e5e5;
+    color: transparent;
+  }
+
+  .text-outline-dark {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.06);
+    color: transparent;
+  }
+
+  /* Service row hover flip */
+  .service-row:hover .service-label {
+    color: #ffffff;
+  }
+}
