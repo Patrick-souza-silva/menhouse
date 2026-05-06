@@ -115,7 +115,7 @@ export default function Footer() {
       <div className="border-t border-neutral-800">
         <div className="container-premium py-5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-[10px] text-neutral-600 tracking-wider">
-            © {new Date().getFullYear()} MenHouse Barbearia — Francisco Beltrão, PR.
+            © {new Date().getFullYear()} MenHouse Barbearia — Francisco Beltrão, PR
           </p>
           <a
             href={`mailto:${BRAND.email}`}
