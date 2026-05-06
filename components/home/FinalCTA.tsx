@@ -77,10 +77,10 @@ export default function FinalCTA() {
             </div>
 
             {/* Trust tags */}
-            <div className="flex flex-wrap gap-0 mt-4 pt-6 border-t border-neutral-800">
-              {["Sem fila de espera", "Confirmação imediata", "2 unidades"].map((item, i) => (
-                <div key={item} className={`flex items-center gap-2 pr-5 ${i !== 0 ? "pl-5 border-l border-neutral-800" : ""}`}>
-                  <span className="w-1 h-1 rounded-full bg-neutral-600" />
+            <div className="flex flex-wrap gap-y-3 mt-4 pt-6 border-t border-neutral-800">
+              {["Sem fila de espera", "Confirmação imediata", "2 unidades"].map((item) => (
+                <div key={item} className="flex items-center gap-2 pr-6">
+                  <span className="w-1 h-1 rounded-full bg-neutral-600 shrink-0" />
                   <span className="text-xs text-neutral-500">{item}</span>
                 </div>
               ))}

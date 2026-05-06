@@ -16,35 +16,50 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/unidades/[slug]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/unidades/[slug]/page.js"
-    ],
     "/barbeiros/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/barbeiros/page.js"
     ],
-    "/barbeiros/[slug]/page": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/barbeiros/[slug]/page.js"
+      "static/chunks/app/_not-found/page.js"
+    ],
+    "/planos/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/planos/page.js"
     ],
     "/produtos/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/produtos/page.js"
     ],
-    "/sobre/page": [
+    "/barbeiros/[slug]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/sobre/page.js"
+      "static/chunks/app/barbeiros/[slug]/page.js"
     ],
     "/unidades/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/unidades/page.js"
+    ],
+    "/unidades/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/unidades/[slug]/page.js"
+    ],
+    "/servicos/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/servicos/page.js"
+    ],
+    "/sobre/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/sobre/page.js"
     ]
   }
 }

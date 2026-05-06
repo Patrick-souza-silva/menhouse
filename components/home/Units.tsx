@@ -37,7 +37,7 @@ export default function Units() {
               className="bg-white group"
             >
               {/* Image */}
-              <div className="relative h-64 overflow-hidden bg-neutral-100">
+              <div className="relative h-52 md:h-64 overflow-hidden bg-neutral-100">
                 <Image
                   src={unit.image}
                   alt={unit.name}
@@ -54,28 +54,26 @@ export default function Units() {
               </div>
 
               {/* Content */}
-              <div className="p-8">
-                <h3 className="text-xl font-bold text-neutral-900 mb-2">{unit.name}</h3>
-                <p className="text-sm text-neutral-500 leading-relaxed mb-7">{unit.description}</p>
+              <div className="p-5 md:p-8">
+                <h3 className="text-lg font-bold text-neutral-900 mb-1">{unit.name}</h3>
+                <p className="text-sm text-neutral-400 mb-5 hidden md:block">{unit.description}</p>
 
-                <div className="flex flex-col gap-3 mb-7 pb-7 border-b border-neutral-100">
-                  <div className="flex items-start gap-3">
-                    <MapPin size={13} className="text-neutral-400 shrink-0 mt-0.5" />
-                    <span className="text-sm text-neutral-600">
-                      {unit.address}<br /><span className="text-neutral-400">{unit.city}</span>
-                    </span>
+                <div className="flex flex-col gap-2.5 mb-5 pb-5 border-b border-neutral-100">
+                  <div className="flex items-start gap-2.5">
+                    <MapPin size={12} className="text-neutral-400 shrink-0 mt-0.5" />
+                    <span className="text-xs text-neutral-600 leading-snug">{unit.address} · <span className="text-neutral-400">{unit.city}</span></span>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <Clock size={13} className="text-neutral-400 shrink-0" />
-                    <span className="text-sm text-neutral-600">Seg–Sex: 09–20h · Sáb: 08–18h</span>
+                  <div className="flex items-center gap-2.5">
+                    <Clock size={12} className="text-neutral-400 shrink-0" />
+                    <span className="text-xs text-neutral-600">Seg–Sex 08:30–20h · Sáb 08:30–17h</span>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <Phone size={13} className="text-neutral-400 shrink-0" />
-                    <span className="text-sm text-neutral-600">{unit.phone}</span>
+                  <div className="flex items-center gap-2.5">
+                    <Phone size={12} className="text-neutral-400 shrink-0" />
+                    <span className="text-xs text-neutral-600">{unit.phone}</span>
                   </div>
                 </div>
 
-                <div className="flex gap-3">
+                <div className="flex gap-2">
                   <a
                     href={getWhatsAppUrl(unit.whatsappRaw, `Olá! Quero agendar na unidade ${unit.shortName}.`)}
                     target="_blank"

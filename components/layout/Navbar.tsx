@@ -18,15 +18,9 @@ const navLinks = [
       desc: u.address,
     })),
   },
-  {
-    label: "Barbeiros",
-    href: "/barbeiros",
-    children: [
-      { label: "Nossa Equipe", href: "/barbeiros", desc: "Conheça os profissionais" },
-      { label: "Cursos", href: "/barbeiros#cursos", desc: "Formação profissional" },
-    ],
-  },
+  { label: "Barbeiros", href: "/barbeiros" },
   { label: "Serviços", href: "/servicos" },
+  { label: "Planos", href: "/planos" },
   { label: "Produtos", href: "/produtos" },
   { label: "Sobre", href: "/sobre" },
 ];

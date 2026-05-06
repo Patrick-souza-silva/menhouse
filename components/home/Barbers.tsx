@@ -29,7 +29,7 @@ export default function Barbers() {
         <div className="section-rule mb-10" />
 
         <div ref={ref} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-neutral-100">
-          {BARBERS.map((barber, i) => (
+          {BARBERS.filter((b) => !b.staffOnly).map((barber, i) => (
             <motion.div
               key={barber.id}
               initial={{ opacity: 0 }}

@@ -65,7 +65,7 @@ export default function ServicosPage() {
                       <Clock size={13} />
                       {featured.duration}
                     </div>
-                    <span className="text-xl font-bold text-neutral-900">{featured.price}</span>
+                    <span className="text-xs text-neutral-400 font-bold tracking-widest uppercase">Preço consulte a unidade</span>
                   </div>
                   <div className="flex flex-wrap gap-2 mb-7">
                     {featured.includes.map((inc) => (
@@ -115,7 +115,7 @@ export default function ServicosPage() {
                       <Clock size={11} />
                       {service.duration}
                     </div>
-                    <span className="text-sm font-bold text-neutral-900">{service.price}</span>
+                    <span className="text-[9px] text-neutral-400 font-bold tracking-widest uppercase">Consulte</span>
                   </div>
                 </div>
               </Link>

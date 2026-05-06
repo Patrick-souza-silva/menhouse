@@ -12,7 +12,9 @@ export const metadata: Metadata = {
 };
 
 export default function BarbeirosPage() {
-  const withCourse = BARBERS.filter((b) => b.hasCourse);
+  const barbers = BARBERS.filter((b) => !b.staffOnly);
+  const staff = BARBERS.filter((b) => b.staffOnly);
+  const withCourse = barbers.filter((b) => b.hasCourse);
 
   return (
     <div className="min-h-screen bg-white pt-[72px]">
@@ -38,7 +40,7 @@ export default function BarbeirosPage() {
       <section className="section-padding border-b border-neutral-100">
         <div className="container-premium">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-100">
-            {BARBERS.map((barber) => (
+            {barbers.map((barber) => (
               <Link
                 key={barber.id}
                 href={`/barbeiros/${barber.slug}`}
@@ -80,6 +82,29 @@ export default function BarbeirosPage() {
           </div>
         </div>
       </section>
+
+      {/* Staff */}
+      {staff.length > 0 && (
+        <section className="section-padding border-b border-neutral-100">
+          <div className="container-premium">
+            <p className="eyebrow mb-4">Equipe de apoio</p>
+            <h2 className="font-serif text-3xl text-neutral-900 mb-10">Funcionários</h2>
+            <div className="flex flex-wrap gap-px bg-neutral-100">
+              {staff.map((person) => (
+                <div key={person.id} className="bg-white flex items-center gap-5 p-6 w-full md:w-auto md:min-w-[320px]">
+                  <div className="relative w-16 h-16 shrink-0 overflow-hidden bg-neutral-100">
+                    <Image src={person.image} alt={person.name} fill className="object-cover" sizes="64px" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-neutral-900">{person.name}</p>
+                    <p className="text-[10px] text-neutral-400 tracking-widest uppercase font-bold mt-0.5">{person.role}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Courses */}
       {withCourse.length > 0 && (

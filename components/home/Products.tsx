@@ -66,16 +66,15 @@ export default function Products() {
                 <p className="text-sm font-bold text-neutral-900 group-hover:text-neutral-500 transition-colors duration-200 leading-tight mb-1">
                   {product.name}
                 </p>
-                <div className="flex items-center justify-between mt-3">
-                  <span className="text-sm font-bold text-neutral-900">{product.price}</span>
+                <div className="mt-3">
                   <a
-                    href={getWhatsAppUrl(WHATSAPP, `Olá! Quero comprar: ${product.name}`)}
+                    href={getWhatsAppUrl(WHATSAPP, `Olá! Quero saber mais sobre: ${product.name}`)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-1 text-[9px] text-neutral-400 hover:text-neutral-900 transition-colors duration-200 tracking-wider uppercase font-bold"
                   >
                     <ShoppingBag size={10} />
-                    Pedir
+                    Consultar
                   </a>
                 </div>
               </div>

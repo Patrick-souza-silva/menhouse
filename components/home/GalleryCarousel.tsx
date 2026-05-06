@@ -9,25 +9,18 @@ import { BRAND } from "@/lib/data";
 
 const slides = [
   { src: "/images/lojas/loja01-1.jpg", label: "Unidade Centro" },
+  { src: "/images/lojas/loja02-1.jpg", label: "Unidade Prime" },
   { src: "/images/lojas/loja01-2.jpg", label: "Unidade Centro" },
-  { src: "/images/lojas/loja01-3.jpg", label: "Logo MenHouse" },
+  { src: "/images/lojas/loja02-2.jpg", label: "Unidade Prime" },
   { src: "/images/lojas/loja01-4.jpg", label: "Unidade Centro" },
+  { src: "/images/lojas/loja02-3.jpg", label: "Unidade Prime" },
   { src: "/images/lojas/loja01-5.jpg", label: "Unidade Centro" },
+  { src: "/images/lojas/loja02-4.jpg", label: "Unidade Prime" },
   { src: "/images/lojas/loja01-6.jpg", label: "Unidade Centro" },
+  { src: "/images/lojas/loja02-5.jpg", label: "Unidade Prime" },
   { src: "/images/lojas/loja01-7.jpg", label: "Unidade Centro" },
-  { src: "/images/lojas/loja02-1.jpg", label: "Unidade Zona Sul" },
-  { src: "/images/lojas/loja02-2.jpg", label: "Unidade Zona Sul" },
-  { src: "/images/lojas/loja02-3.jpg", label: "Unidade Zona Sul" },
-  { src: "/images/lojas/loja02-4.jpg", label: "Unidade Zona Sul" },
-  { src: "/images/lojas/loja02-5.jpg", label: "Unidade Zona Sul" },
-  { src: "/images/lojas/loja02-6.jpg", label: "Unidade Zona Sul" },
-  { src: "/images/barbeiros/pedro-caetano.jpg", label: "Pedro G. Caetano" },
-  { src: "/images/barbeiros/danilo-teodoro.jpg", label: "Danilo Teodoro" },
-  { src: "/images/barbeiros/jeferson-barbosa.webp", label: "Jeferson Barbosa" },
-  { src: "/images/barbeiros/victor.webp", label: "Victor" },
-  { src: "/images/barbeiros/maria-eduarda-caetano.webp", label: "Maria Eduarda Caetano" },
-  { src: "/images/barbeiros/matteus-sauer.webp", label: "Matteus Sauer" },
-  { src: "/images/barbeiros/luan-matheus.png", label: "Luan Matheus" },
+  { src: "/images/lojas/loja02-6.jpg", label: "Unidade Prime" },
+  { src: "/images/lojas/loja01-3.jpg", label: "MenHouse" },
 ];
 
 const N = slides.length;
@@ -146,8 +139,8 @@ export default function GalleryCarousel() {
       </div>
 
       {/* Slider */}
-      <div ref={containerRef} className="overflow-hidden min-h-[480px]">
-        <div ref={trackRef} className="flex h-[480px]">
+      <div ref={containerRef} className="overflow-hidden min-h-[260px]">
+        <div ref={trackRef} className="flex h-[260px] sm:h-[380px] lg:h-[480px]">
           {slides.map((slide, i) => (
             <div
               key={i}

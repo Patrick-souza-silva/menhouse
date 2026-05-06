@@ -53,28 +53,32 @@ export default function UnidadesPage() {
                   </div>
                 </div>
 
-                <div className="p-8">
-                  <h2 className="text-2xl font-bold text-neutral-900 mb-2">{unit.name}</h2>
-                  <p className="text-sm text-neutral-500 leading-relaxed mb-8">{unit.description}</p>
+                <div className="p-5 md:p-8">
+                  <h2 className="text-xl md:text-2xl font-bold text-neutral-900 mb-1">{unit.name}</h2>
+                  <p className="text-sm text-neutral-500 leading-relaxed mb-6 hidden md:block">{unit.description}</p>
 
-                  <div className="flex flex-col gap-3 mb-8 pb-8 border-b border-neutral-100">
+                  {/* Info grid */}
+                  <div className="mb-6 pb-6 border-b border-neutral-100 space-y-2.5">
                     <div className="flex items-start gap-3">
-                      <MapPin size={13} className="text-neutral-400 shrink-0 mt-0.5" />
-                      <span className="text-sm text-neutral-700">
-                        {unit.address}<br /><span className="text-neutral-400">{unit.city} · CEP {unit.cep}</span>
+                      <MapPin size={12} className="text-neutral-400 shrink-0 mt-0.5" />
+                      <span className="text-sm text-neutral-700 leading-snug">
+                        {unit.address}
+                        <span className="text-neutral-400 block text-xs mt-0.5">{unit.city} · CEP {unit.cep}</span>
                       </span>
                     </div>
-                    {unit.hours.map((h) => (
-                      <div key={h.day} className="flex items-center gap-3">
-                        <Clock size={13} className="text-neutral-400 shrink-0" />
-                        <span className="text-sm text-neutral-600">
-                          <span className="font-bold">{h.day}:</span>{" "}
-                          <span className={h.time === "Fechado" ? "text-neutral-400" : ""}>{h.time}</span>
-                        </span>
+                    <div className="flex items-start gap-3">
+                      <Clock size={12} className="text-neutral-400 shrink-0 mt-0.5" />
+                      <div className="grid grid-cols-2 gap-x-4 gap-y-0.5 flex-1">
+                        {unit.hours.map((h) => (
+                          <div key={h.day} className="contents">
+                            <span className="text-xs text-neutral-500">{h.day}</span>
+                            <span className={`text-xs font-medium ${h.time === "Fechado" ? "text-neutral-400" : "text-neutral-700"}`}>{h.time}</span>
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    </div>
                     <div className="flex items-center gap-3">
-                      <Phone size={13} className="text-neutral-400 shrink-0" />
+                      <Phone size={12} className="text-neutral-400 shrink-0" />
                       <a
                         href={getWhatsAppUrl(unit.whatsappRaw)}
                         target="_blank"
@@ -86,16 +90,17 @@ export default function UnidadesPage() {
                     </div>
                   </div>
 
-                  <div className="flex flex-wrap gap-2 mb-8">
+                  {/* Features */}
+                  <div className="flex flex-wrap gap-1.5 mb-6">
                     {unit.features.map((f) => (
-                      <span key={f} className="text-[10px] text-neutral-500 tracking-widest border border-neutral-200 px-3 py-1.5 uppercase font-bold">
+                      <span key={f} className="text-[9px] text-neutral-500 tracking-widest border border-neutral-200 px-2.5 py-1 uppercase font-bold">
                         {f}
                       </span>
                     ))}
                   </div>
 
                   {/* Map */}
-                  <div className="overflow-hidden border border-neutral-100 mb-6 h-44">
+                  <div className="overflow-hidden border border-neutral-100 mb-5 h-36 md:h-48">
                     <iframe
                       src={unit.mapEmbed}
                       width="100%"
@@ -107,7 +112,7 @@ export default function UnidadesPage() {
                     />
                   </div>
 
-                  <div className="flex gap-3">
+                  <div className="flex gap-2">
                     <a
                       href={getWhatsAppUrl(unit.whatsappRaw, `Olá! Quero agendar na unidade ${unit.shortName}.`)}
                       target="_blank"

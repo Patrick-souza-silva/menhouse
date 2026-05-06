@@ -52,23 +52,15 @@ export default function Testimonials() {
               </blockquote>
 
               {/* Author */}
-              <div className="flex items-center justify-between pt-6 border-t border-neutral-800 group-hover:border-neutral-700 transition-colors duration-300">
-                <div className="flex items-center gap-3">
-                  <div className="w-7 h-7 bg-neutral-800 group-hover:bg-neutral-700 border border-neutral-700 flex items-center justify-center transition-colors duration-300">
-                    <span className="text-[10px] text-white font-bold">
-                      {t.name.charAt(0)}
-                    </span>
-                  </div>
-                  <div>
-                    <p className="text-sm text-white font-bold">{t.name}</p>
-                    <p className="text-xs text-neutral-500 mt-0.5">{t.role}</p>
-                  </div>
+              <div className="flex items-center gap-3 pt-6 border-t border-neutral-800 group-hover:border-neutral-700 transition-colors duration-300">
+                <div className="w-7 h-7 bg-neutral-800 group-hover:bg-neutral-700 border border-neutral-700 flex items-center justify-center transition-colors duration-300">
+                  <span className="text-[10px] text-white font-bold">
+                    {t.name.charAt(0)}
+                  </span>
                 </div>
-                <div className="text-right">
-                  <p className="text-[10px] text-neutral-400 tracking-widest uppercase font-bold">{t.barber}</p>
-                  <p className="text-[10px] text-neutral-600 mt-0.5">
-                    {t.unit === "centro" ? "Centro" : "Zona Sul"}
-                  </p>
+                <div>
+                  <p className="text-sm text-white font-bold">{t.name}</p>
+                  <p className="text-xs text-neutral-500 mt-0.5">{t.role}</p>
                 </div>
               </div>
             </motion.div>

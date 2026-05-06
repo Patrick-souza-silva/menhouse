@@ -59,16 +59,15 @@ export default function ProdutosPage() {
                   <span className="eyebrow mb-3">{product.category}</span>
                   <h2 className="text-2xl font-bold text-neutral-900 mb-3">{product.name}</h2>
                   <p className="text-neutral-500 leading-relaxed mb-8">{product.description}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-neutral-900">{product.price}</span>
+                  <div>
                     <a
-                      href={getWhatsAppUrl(BRAND.whatsappRaw, `Olá! Quero comprar: ${product.name} — ${product.price}`)}
+                      href={getWhatsAppUrl(BRAND.whatsappRaw, `Olá! Quero saber mais sobre: ${product.name}`)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-primary text-xs py-3"
                     >
                       <ShoppingBag size={13} />
-                      Comprar no WhatsApp
+                      Consultar no WhatsApp
                     </a>
                   </div>
                 </div>
@@ -94,16 +93,15 @@ export default function ProdutosPage() {
                   <p className="text-sm font-bold text-neutral-900 group-hover:text-neutral-500 transition-colors leading-tight mb-3">
                     {product.name}
                   </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-bold text-neutral-900">{product.price}</span>
+                  <div className="mt-1">
                     <a
-                      href={getWhatsAppUrl(BRAND.whatsappRaw, `Olá! Quero comprar: ${product.name}`)}
+                      href={getWhatsAppUrl(BRAND.whatsappRaw, `Olá! Quero saber mais sobre: ${product.name}`)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-1 text-[9px] text-neutral-400 hover:text-neutral-900 transition-colors font-bold tracking-wider uppercase"
                     >
                       <ShoppingBag size={10} />
-                      Pedir
+                      Consultar
                     </a>
                   </div>
                 </div>

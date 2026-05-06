@@ -70,12 +70,12 @@ export default async function ServicePage({ params }: Props) {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Article */}
             <div className="lg:col-span-2">
-              <div className="flex flex-wrap items-center gap-4 mb-6">
+              <div className="flex items-center gap-4 mb-6">
                 <div className="flex items-center gap-1.5 text-[10px] text-neutral-400 font-bold">
                   <Clock size={10} />
                   {service.duration}
                 </div>
-                <span className="font-serif text-2xl text-neutral-900">{service.price}</span>
+                <span className="text-[9px] text-neutral-400 tracking-widest uppercase font-bold">Preço varia por unidade</span>
               </div>
 
               <h1 className="font-serif text-4xl md:text-5xl text-neutral-900 leading-snug mb-8">
@@ -110,7 +110,7 @@ export default async function ServicePage({ params }: Props) {
                       <p className="text-sm font-bold text-neutral-900 group-hover:text-neutral-500 transition-colors duration-200">
                         {s.name}
                       </p>
-                      <p className="text-xs text-neutral-400 mt-1">{s.price}</p>
+                      <p className="text-xs text-neutral-400 mt-1">{s.duration}</p>
                     </Link>
                   ))}
                 </div>
@@ -121,12 +121,22 @@ export default async function ServicePage({ params }: Props) {
             <div>
               <div className="border border-neutral-100 p-6 sticky top-28">
                 <h3 className="font-serif text-xl text-neutral-900 mb-2">{service.name}</h3>
-                <div className="flex items-center gap-4 mb-4 pb-4 border-b border-neutral-100">
+                <div className="flex items-center gap-3 mb-4 pb-4 border-b border-neutral-100">
                   <div className="flex items-center gap-1.5 text-xs text-neutral-400">
                     <Clock size={11} />
                     {service.duration}
                   </div>
-                  <span className="font-serif text-lg text-neutral-900">{service.price}</span>
+                </div>
+                {/* Per-unit pricing */}
+                <div className="grid grid-cols-2 gap-px bg-neutral-100 mb-4">
+                  <div className="bg-white p-3 text-center">
+                    <p className="text-[8px] text-neutral-400 tracking-widest uppercase font-bold mb-1">MenHouse</p>
+                    <p className="text-xs font-bold text-neutral-900">Consulte</p>
+                  </div>
+                  <div className="bg-neutral-900 p-3 text-center">
+                    <p className="text-[8px] text-neutral-500 tracking-widest uppercase font-bold mb-1">Prime</p>
+                    <p className="text-xs font-bold text-white">Consulte</p>
+                  </div>
                 </div>
                 <p className="text-xs text-neutral-500 leading-relaxed mb-6">{service.shortDesc}</p>
                 <a

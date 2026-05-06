@@ -54,18 +54,18 @@ export default function Services() {
                 </p>
 
                 {/* Meta */}
-                <div className="flex items-center gap-4 md:gap-6 shrink-0">
+                <div className="flex items-center gap-3 md:gap-6 shrink-0">
                   {service.featured && (
                     <span className="hidden sm:inline text-[8px] font-bold tracking-widest uppercase bg-neutral-900 text-white group-hover:bg-white group-hover:text-neutral-900 px-2 py-0.5 transition-colors duration-300">
                       Popular
                     </span>
                   )}
-                  <div className="flex items-center gap-1.5 text-xs text-neutral-400 group-hover:text-neutral-500 transition-colors duration-300 whitespace-nowrap">
+                  <div className="hidden sm:flex items-center gap-1.5 text-xs text-neutral-400 group-hover:text-neutral-500 transition-colors duration-300 whitespace-nowrap">
                     <Clock size={11} />
                     {service.duration}
                   </div>
-                  <span className="text-sm font-bold text-neutral-900 group-hover:text-white transition-colors duration-300 w-14 text-right tabular-nums">
-                    {service.price}
+                  <span className="hidden md:block text-[9px] text-neutral-400 group-hover:text-neutral-500 tracking-wider uppercase font-bold whitespace-nowrap transition-colors duration-300">
+                    Consulte
                   </span>
                   <ArrowUpRight
                     size={16}

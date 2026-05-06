@@ -119,12 +119,12 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.5 }}
-            className="flex items-stretch border-t border-neutral-100 pt-8"
+            className="flex items-stretch border-t border-neutral-100 pt-6 md:pt-8"
           >
             {stats.map((s, i) => (
-              <div key={i} className="flex flex-col flex-1 pr-6 mr-6 border-r border-neutral-100 last:border-0 last:mr-0 last:pr-0">
-                <span className="font-serif text-2xl text-neutral-900 font-bold leading-none">{s.value}</span>
-                <span className="text-[9px] text-neutral-400 tracking-widest uppercase mt-1.5 font-bold">{s.label}</span>
+              <div key={i} className="flex flex-col flex-1 pr-3 mr-3 md:pr-6 md:mr-6 border-r border-neutral-100 last:border-0 last:mr-0 last:pr-0">
+                <span className="font-serif text-xl md:text-2xl text-neutral-900 font-bold leading-none">{s.value}</span>
+                <span className="text-[8px] md:text-[9px] text-neutral-400 tracking-widest uppercase mt-1.5 font-bold">{s.label}</span>
               </div>
             ))}
           </motion.div>
