@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
+import { SentryProvider } from "@/components/layout/SentryProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -171,10 +172,12 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-white text-neutral-900 antialiased">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <WhatsAppButton />
+        <SentryProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+          <WhatsAppButton />
+        </SentryProvider>
       </body>
     </html>
   );

@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/barbeiros/pedro-caetano":{},"/barbeiros/danilo-teodoro":{},"/barbeiros/jeferson-barbosa":{},"/barbeiros/victor":{},"/barbeiros/maria-eduarda-caetano":{},"/barbeiros/matteus-sauer":{},"/barbeiros/luan-matheus":{},"/unidades/barbearia-centro-francisco-beltrao":{},"/unidades/barbearia-zona-sul-francisco-beltrao":{}},"dynamicRoutes":{"/barbeiros/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/barbeiros/[slug]","routeRegex":"^\\/barbeiros\\/([^/]+?)(?:\\/)?$","allowHeader":[]},"/unidades/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/unidades/[slug]","routeRegex":"^\\/unidades\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"d7e3516cc44c189db7a7a9baea3693a6","previewModeSigningKey":"31e9758ca8b52444e9c94dac5047fc616d68b10ee7ba080fd060376155e4e401","previewModeEncryptionKey":"ec92eec03339614a6760bbee6cbe9d1ed60608e46d43e095919b963614db0d96"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "484083b7751b564f10022c519e6b8a48",
+    "previewModeSigningKey": "c3638c2451252b8b68d8fd63d9a552831f8073634954d6158bf72319b709ea3f",
+    "previewModeEncryptionKey": "af6b900c786d4b5b04a605286e73b79f24c187eec75fcbe67b99d87b36f87111"
+  }
+}
